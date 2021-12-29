@@ -7,6 +7,7 @@ type puzzle = {
 
 type puzzleNode = {
   isCorrect: boolean;
+  isSelected?: boolean;
   color?: string;
 };
 

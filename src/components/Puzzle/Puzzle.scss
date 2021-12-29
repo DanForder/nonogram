@@ -1,0 +1,19 @@
+.puzzle {
+  .puzzle__grid {
+    grid-area: puzzle-graph;
+    display: grid;
+    gap: 0.5rem;
+    background-color: darken(#2c2a30, 5);
+    border: 0.5rem solid darken(#2c2a30, 5);
+    margin: 5rem 0;
+
+    .puzzle__node {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+
+      background-color: #2c2a30;
+    }
+  }
+}
