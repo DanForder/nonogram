@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+* {
+  color: $text-color;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
