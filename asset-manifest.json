@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/nonogram/static/css/main.073c9b0a.css",
-    "main.js": "/nonogram/static/js/main.0a04ed25.js",
+    "main.css": "/nonogram/static/css/main.f0dac007.css",
+    "main.js": "/nonogram/static/js/main.7fb55e85.js",
     "static/js/377.b234f422.chunk.js": "/nonogram/static/js/377.b234f422.chunk.js",
     "service-worker.js": "/nonogram/service-worker.js",
-    "static/media/logo.svg": "/nonogram/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "index.html": "/nonogram/index.html",
-    "main.073c9b0a.css.map": "/nonogram/static/css/main.073c9b0a.css.map",
-    "main.0a04ed25.js.map": "/nonogram/static/js/main.0a04ed25.js.map",
+    "main.f0dac007.css.map": "/nonogram/static/css/main.f0dac007.css.map",
+    "main.7fb55e85.js.map": "/nonogram/static/js/main.7fb55e85.js.map",
     "377.b234f422.chunk.js.map": "/nonogram/static/js/377.b234f422.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0a04ed25.js"
+    "static/css/main.f0dac007.css",
+    "static/js/main.7fb55e85.js"
   ]
 }
