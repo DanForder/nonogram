@@ -1,28 +1,41 @@
+import { v4 as uuidv4 } from "uuid";
 import puzzle, { puzzleNode } from "../types/puzzle";
 import { basicReducer } from "./arrayUtils";
 
-export const getClueText = (clues: puzzleNode[]): string => {
-  let clueText = "";
+export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
   let currentValue = 0;
+  let clueJsx: JSX.Element[] = [];
+  let currentSelected = true;
 
   for (let i = 0; i < clues.length; i++) {
-    const element = clues[i];
+    const { isCorrect, isSelected } = clues[i];
 
-    if (element.isCorrect) {
+    // if we get a correct, add to current value, and check if it's selected
+    if (isCorrect) {
       currentValue++;
-    } else {
-      if (currentValue > 0) {
-        clueText += currentValue + " ";
-        currentValue = 0;
-      }
+      currentSelected = isSelected ?? false;
     }
 
-    if (i === clues.length - 1 && currentValue > 0) {
-      clueText += currentValue;
+    // if we have nothing to add, continue
+    if (currentValue === 0) {
+      continue;
+    }
+
+    // add a new tile if it's a blank or the very last tile in the set
+    if (!isCorrect || i === clues.length - 1) {
+      clueJsx.push(
+        <span
+          key={`clue-${uuidv4()}`}
+          style={{ opacity: currentSelected ? "0.4" : "1" }}
+        >
+          {currentValue}
+        </span>
+      );
+      currentValue = 0;
     }
   }
 
-  return clueText;
+  return clueJsx;
 };
 
 export const getPuzzleSize = (length: number): number => {
