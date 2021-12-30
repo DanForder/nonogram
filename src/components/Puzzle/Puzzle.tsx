@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import puzzle, { puzzleNode } from "../../types/puzzle";
-import { getClueText, getPuzzleSize } from "../../utils/puzzleUtils";
+import {
+  getClueText,
+  getPuzzleSize,
+  getSelectedCorrectTiles,
+  getTotalCorrectTiles,
+} from "../../utils/puzzleUtils";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
 import "./Puzzle.scss";
 
@@ -9,14 +14,23 @@ type PuzzleType = {
 };
 
 const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
-  const [puzzleState, setPuzzleState] = useState<puzzleNode[]>([]);
+  const [puzzleState, setPuzzleState] = useState([...puzzle]);
   const [livesLeft, setLivesLeft] = useState(3);
 
   const puzzleSize = getPuzzleSize(puzzleState.length);
+  const selectedCorrectTiles = getSelectedCorrectTiles(puzzleState);
+  const totalCorrectTiles = getTotalCorrectTiles(puzzleState);
 
   useEffect(() => {
     setPuzzleState([...puzzle]);
   }, [puzzle]);
+
+  useEffect(() => {
+    if (selectedCorrectTiles === totalCorrectTiles) {
+      window.alert("you win!");
+      window.location.reload();
+    }
+  }, [selectedCorrectTiles, totalCorrectTiles]);
 
   useEffect(() => {
     if (livesLeft === 0) {
