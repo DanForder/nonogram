@@ -113,11 +113,17 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
     return result;
   };
 
-  const handleNodeClick = (index: number) => {
+  const handleNodeClick = (event: any, index: number, isPrimary: boolean) => {
+    event.preventDefault();
+
+    if (!isPrimary) {
+      console.log(`right click pressed on node ${index}`);
+      return;
+    }
+
     const { isCorrect } = puzzleState[index];
 
     const updatedPuzzleArr = [...puzzleState];
-    // updatedPuzzleArr[index].color = isCorrect ? "green" : "";
     updatedPuzzleArr[index].isSelected = true;
 
     if (!isCorrect) {
@@ -134,8 +140,11 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
         color={puzzleNode.color}
         isRevealed={puzzleNode.isSelected}
         failState={!puzzleNode.isCorrect && puzzleNode.isSelected}
-        onClick={() => {
-          handleNodeClick(index);
+        onClick={(e: any) => {
+          handleNodeClick(e, index, true);
+        }}
+        onSecondaryClick={(e: any) => {
+          handleNodeClick(e, index, false);
         }}
       />
     );

@@ -6,6 +6,7 @@ type PuzzleNodeType = {
   failState?: boolean;
   isRevealed?: boolean;
   onClick: any;
+  onSecondaryClick: any;
 };
 
 const PuzzleNode: React.FC<PuzzleNodeType> = ({
@@ -13,6 +14,7 @@ const PuzzleNode: React.FC<PuzzleNodeType> = ({
   failState,
   isRevealed,
   onClick,
+  onSecondaryClick,
 }) => {
   const backgroundColor = isRevealed ? color : "";
   const puzzleNodeClassName = classnames("puzzle-node", {
@@ -25,6 +27,7 @@ const PuzzleNode: React.FC<PuzzleNodeType> = ({
       style={{ backgroundColor }}
       className={puzzleNodeClassName}
       onClick={onClick}
+      onContextMenu={onSecondaryClick}
     />
   );
 };
