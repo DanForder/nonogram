@@ -31,6 +31,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   useEffect(() => {
     if (selectedCorrectTiles === totalCorrectTiles && !navigating) {
       setNavigating(true);
+      window.alert("you won! moving to next level");
       onComplete();
     }
   }, [navigating, onComplete, selectedCorrectTiles, totalCorrectTiles]);

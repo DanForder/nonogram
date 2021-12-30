@@ -27,8 +27,7 @@ const PuzzleView = () => {
     return Error;
   }
 
-  const handleWinNavigation = async () => {
-    navigate(`/`);
+  const handleWinNavigation = () => {
     navigate(`/puzzles/${puzzleId + 2}`);
   };
 
