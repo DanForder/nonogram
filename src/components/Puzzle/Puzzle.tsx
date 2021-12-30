@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import puzzle, { puzzleNode } from "../../types/puzzle";
+import { getClueText, getPuzzleSize } from "../../utils/puzzleUtils";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
 import "./Puzzle.scss";
 
@@ -8,8 +9,14 @@ type PuzzleType = {
 };
 
 const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
-  const [puzzleState, setPuzzleState] = useState([...puzzle]);
+  const [puzzleState, setPuzzleState] = useState<puzzleNode[]>([]);
   const [livesLeft, setLivesLeft] = useState(3);
+
+  const puzzleSize = getPuzzleSize(puzzleState.length);
+
+  useEffect(() => {
+    setPuzzleState([...puzzle]);
+  }, [puzzle]);
 
   useEffect(() => {
     if (livesLeft === 0) {
@@ -17,11 +24,6 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
       window.location.reload();
     }
   }, [livesLeft]);
-
-  const puzzleSize = Math.sqrt(puzzleState.length);
-  if (puzzleSize % 1 !== 0) {
-    throw new Error("puzzle is not a square");
-  }
 
   const getColumnClueJsx = (
     puzzleNodes: puzzleNode[],
@@ -73,30 +75,6 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
         {clueText}
       </span>
     );
-  };
-
-  const getClueText = (clues: puzzleNode[]): string => {
-    let clueText = "";
-    let currentValue = 0;
-
-    for (let i = 0; i < clues.length; i++) {
-      const element = clues[i];
-
-      if (element.isCorrect) {
-        currentValue++;
-      } else {
-        if (currentValue > 0) {
-          clueText += currentValue + " ";
-          currentValue = 0;
-        }
-      }
-
-      if (i === clues.length - 1 && currentValue > 0) {
-        clueText += currentValue;
-      }
-    }
-
-    return clueText;
   };
 
   const getPuzzleJsx = (puzzle: puzzle, size: number) => {
