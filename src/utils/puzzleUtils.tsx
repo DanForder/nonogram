@@ -14,6 +14,7 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
     if (isCorrect) {
       currentValue++;
       currentSelected = (isSelected && currentSelected) ?? false;
+      continue;
     }
 
     // if we have nothing to add, continue
@@ -21,22 +22,29 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
       continue;
     }
 
-    // add a new tile if it's a blank or the very last tile in the set
-    if (!isCorrect || i === clues.length - 1) {
-      clueJsx.push(
-        <span
-          key={`clue-${uuidv4()}`}
-          style={{ opacity: currentSelected ? "0.4" : "1" }}
-        >
-          {currentValue}
-        </span>
-      );
-      currentValue = 0;
-      currentSelected = true;
-    }
+    // add a new tile if it's a blank
+    clueJsx.push(getClueSpan(currentSelected, currentValue));
+    currentValue = 0;
+    currentSelected = true;
+  }
+
+  // if we have nothing in the array, add the clue
+  if (clueJsx.length === 0) {
+    clueJsx.push(getClueSpan(currentSelected, currentValue));
   }
 
   return clueJsx;
+};
+
+const getClueSpan = (currentSelected: boolean, currentValue: number) => {
+  return (
+    <span
+      key={`clue-${uuidv4()}`}
+      style={{ opacity: currentSelected ? "0.4" : "1" }}
+    >
+      {currentValue}
+    </span>
+  );
 };
 
 export const getPuzzleSize = (length: number): number => {
