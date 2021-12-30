@@ -1,4 +1,4 @@
-import puzzle from "../types/puzzle";
+import puzzle from "../../types/puzzle";
 
 export const puzzles: puzzle[] = [
   [

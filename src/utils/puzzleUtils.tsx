@@ -10,10 +10,13 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
   for (let i = 0; i < clues.length; i++) {
     const { isCorrect, isSelected } = clues[i];
 
-    // if we get a correct, add to current value, and check if it's selected
+    // if we get a correct, add to current value then continue
     if (isCorrect) {
       currentValue++;
-      currentSelected = (isSelected && currentSelected) ?? false;
+      // if any in this batch aren't selected, set to false
+      if (!isSelected) {
+        currentSelected = false;
+      }
       continue;
     }
 
@@ -22,14 +25,13 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
       continue;
     }
 
-    // add a new tile if it's a blank
     clueJsx.push(getClueSpan(currentSelected, currentValue));
     currentValue = 0;
     currentSelected = true;
   }
 
-  // if we have nothing in the array, add the clue
-  if (clueJsx.length === 0) {
+  // if we have more values or nothing in the array, add the final element
+  if (clueJsx.length === 0 || currentValue > 0) {
     clueJsx.push(getClueSpan(currentSelected, currentValue));
   }
 

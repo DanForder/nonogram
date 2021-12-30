@@ -11,10 +11,10 @@ import "./Puzzle.scss";
 
 type PuzzleType = {
   puzzle: puzzle;
-  handleWinNavigation: any;
+  onComplete: any;
 };
 
-const Puzzle: React.FC<PuzzleType> = ({ puzzle, handleWinNavigation }) => {
+const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   const [puzzleState, setPuzzleState] = useState<puzzle>([]);
   const [livesLeft, setLivesLeft] = useState(3);
   const [navigating, setNavigating] = useState(false);
@@ -25,20 +25,15 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, handleWinNavigation }) => {
 
   useEffect(() => {
     setPuzzleState([...puzzle]);
+    setNavigating(false);
   }, [puzzle]);
 
   useEffect(() => {
-    // TODO: why is this being called multiple times without the !navigating condition?
     if (selectedCorrectTiles === totalCorrectTiles && !navigating) {
       setNavigating(true);
-      handleWinNavigation();
+      onComplete();
     }
-  }, [
-    handleWinNavigation,
-    navigating,
-    selectedCorrectTiles,
-    totalCorrectTiles,
-  ]);
+  }, [navigating, onComplete, selectedCorrectTiles, totalCorrectTiles]);
 
   useEffect(() => {
     if (livesLeft === 0) {
@@ -82,7 +77,10 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, handleWinNavigation }) => {
     currentRowIndex: number,
     rowSize: number
   ): JSX.Element => {
-    const rowClues = puzzle.slice(currentRowIndex, currentRowIndex + rowSize);
+    const rowClues = puzzleState.slice(
+      currentRowIndex,
+      currentRowIndex + rowSize
+    );
     const clueText = getClueText(rowClues);
 
     return (
@@ -132,7 +130,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, handleWinNavigation }) => {
     const { isCorrect } = puzzleState[index];
 
     const updatedPuzzleArr = [...puzzleState];
-    updatedPuzzleArr[index].isSelected = true;
+    updatedPuzzleArr[index] = { ...updatedPuzzleArr[index], isSelected: true };
 
     if (!isCorrect) {
       setLivesLeft(livesLeft - 1);

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import { puzzles } from "../../data/puzzles";
+import { puzzles } from "../../data/mock/puzzles";
 
 export const HomeView = () => {
   const puzzleContents = puzzles.map((_puzzle, index) => (

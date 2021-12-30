@@ -1,22 +1,12 @@
+import { puzzles } from "../../data/mock/puzzles";
 import { customRender } from "../../utils/testUtils";
 import Puzzle from "./Puzzle";
 
-test("Renders puzzle component with a puzzle", () => {
-  const { container } = customRender(
-    <Puzzle
-      puzzle={[
-        { isCorrect: false },
-        { isCorrect: true },
-        { isCorrect: true },
-        { isCorrect: true },
-        { isCorrect: true },
-        { isCorrect: true },
-        { isCorrect: true },
-        { isCorrect: false },
-        { isCorrect: true },
-      ]}
-      handleWinNavigation={jest.fn()}
-    />
-  );
-  expect(container).toMatchSnapshot();
+puzzles.forEach((puzzle) => {
+  test(`renders puzzle`, () => {
+    const { container } = customRender(
+      <Puzzle puzzle={puzzle} onComplete={jest.fn()} />
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
