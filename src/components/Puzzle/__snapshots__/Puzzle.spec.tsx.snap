@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders puzzle component with a puzzle 1`] = `
+<div>
+  <div
+    class="puzzle"
+  >
+    <div
+      class="puzzle__grid"
+      style="grid-template-columns: 1fr 1fr 1fr 1fr;"
+    >
+      <span />
+      <span>
+        2
+      </span>
+      <span>
+        2 
+      </span>
+      <span>
+        3
+      </span>
+      <span>
+        2
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: red; color: red;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span>
+        3
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span>
+        1 1
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: red; color: red;"
+      >
+        O
+      </span>
+      <span
+        class="puzzle__node"
+        style="background-color: dodgerblue; color: dodgerblue;"
+      >
+        O
+      </span>
+    </div>
+  </div>
+</div>
+`;
