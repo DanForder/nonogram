@@ -36,12 +36,15 @@ exports[`Renders puzzle component with a puzzle 1`] = `
       </span>
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         style="display: flex; align-items: center; justify-content: flex-end;"
@@ -50,12 +53,15 @@ exports[`Renders puzzle component with a puzzle 1`] = `
       </span>
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         style="display: flex; align-items: center; justify-content: flex-end;"
@@ -64,12 +70,15 @@ exports[`Renders puzzle component with a puzzle 1`] = `
       </span>
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
       <span
         class="puzzle-node"
+        role="button"
       />
     </div>
   </div>

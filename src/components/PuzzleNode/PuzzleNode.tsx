@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import React from "react";
 import "./PuzzleNode.scss";
 
 type PuzzleNodeType = {
@@ -22,6 +21,7 @@ const PuzzleNode: React.FC<PuzzleNodeType> = ({
 
   return (
     <span
+      role="button"
       style={{ backgroundColor }}
       className={puzzleNodeClassName}
       onClick={onClick}

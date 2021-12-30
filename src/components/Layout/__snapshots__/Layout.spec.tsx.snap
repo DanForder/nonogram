@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Layout component 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <p>
+        Layout child
+      </p>
+    </main>
+  </div>
+</div>
+`;

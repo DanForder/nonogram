@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders revealed and correct puzzle node 1`] = `
+<div>
+  <span
+    class="puzzle-node"
+    role="button"
+    style="background-color: dodgerblue;"
+  />
+</div>
+`;
+
+exports[`Renders revealed and incorrect puzzle node 1`] = `
+<div>
+  <span
+    class="puzzle-node puzzle-node--incorrect"
+    role="button"
+  />
+</div>
+`;
