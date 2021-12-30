@@ -5,7 +5,7 @@ type puzzle = {
   puzzleNodes: puzzleNode[];
 };
 
-type puzzleNode = {
+export type puzzleNode = {
   isCorrect: boolean;
   isSelected?: boolean;
   color?: string;
