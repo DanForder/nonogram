@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import puzzle, { puzzleNode } from "../../types/puzzle";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
 import "./Puzzle.scss";
@@ -7,7 +8,17 @@ type PuzzleType = {
 };
 
 const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
-  const puzzleSize = Math.sqrt(puzzle.length);
+  const [puzzleState, setPuzzleState] = useState([...puzzle]);
+  const [livesLeft, setLivesLeft] = useState(3);
+
+  useEffect(() => {
+    if (livesLeft === 0) {
+      window.alert("you lost!");
+      window.location.reload();
+    }
+  }, [livesLeft]);
+
+  const puzzleSize = Math.sqrt(puzzleState.length);
   if (puzzleSize % 1 !== 0) {
     throw new Error("puzzle is not a square");
   }
@@ -93,7 +104,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
     let result: JSX.Element[] = [...getColumnClueJsx(puzzle, puzzleSize)];
 
     for (let index = 0; index < puzzle.length; index++) {
-      const node = puzzle[index];
+      const node = puzzleState[index];
 
       // if we're at the beginning of a row, add a row clue
       if (index % size === 0) {
@@ -111,18 +122,26 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
   };
 
   const handleNodeClick = (index: number) => {
-    const { isCorrect } = puzzle[index];
-    console.log(`${isCorrect ? "Correct" : "Incorrect"} choice!`);
+    const { isCorrect } = puzzleState[index];
+
+    const updatedPuzzleArr = [...puzzleState];
+    // updatedPuzzleArr[index].color = isCorrect ? "green" : "";
+    updatedPuzzleArr[index].isSelected = true;
+
+    if (!isCorrect) {
+      setLivesLeft(livesLeft - 1);
+    }
+
+    setPuzzleState(updatedPuzzleArr);
   };
 
   const createPuzzleNode = (puzzleNode: puzzleNode, index: number) => {
-    const color = puzzleNode.isCorrect ? "dodgerblue" : "red";
-
     return (
       <PuzzleNode
         key={`puzzle-node-${index}`}
-        color={color}
+        color={puzzleNode.color}
         isRevealed={puzzleNode.isSelected}
+        failState={!puzzleNode.isCorrect && puzzleNode.isSelected}
         onClick={() => {
           handleNodeClick(index);
         }}
@@ -140,11 +159,11 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
   };
 
   const gridTemplateColumns = getGridTemplateColumns();
-
-  const puzzleJsx = getPuzzleJsx(puzzle, puzzleSize);
+  const puzzleJsx = getPuzzleJsx(puzzleState, puzzleSize);
 
   return (
     <div className="puzzle">
+      <p>Lives Left : {livesLeft}</p>
       <div className="puzzle__grid" style={{ gridTemplateColumns }}>
         {puzzleJsx}
       </div>

@@ -3,13 +3,13 @@ import puzzle from "../types/puzzle";
 export const puzzles: puzzle[] = [
   [
     { isCorrect: false },
-    { isCorrect: true },
-    { isCorrect: true },
-    { isCorrect: true },
-    { isCorrect: true },
-    { isCorrect: true },
-    { isCorrect: true },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
     { isCorrect: false },
-    { isCorrect: true },
+    { isCorrect: true, color: "cornflowerblue" },
   ],
 ];
