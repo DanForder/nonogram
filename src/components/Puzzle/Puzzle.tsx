@@ -9,12 +9,6 @@ type PuzzleType = {
 const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
   //   console.log(puzzle);
 
-  const puzzleJsx = puzzle.puzzleNodes.map((node, index) => (
-    <span className="puzzle__node" key={index}>
-      {node.isCorrect ? "O" : "X"}
-    </span>
-  ));
-
   const getRowClueJsx = (index: number, rowSize: number): JSX.Element => {
     const rowClues = puzzle.puzzleNodes.slice(index, index + rowSize);
     let clueText = "";
