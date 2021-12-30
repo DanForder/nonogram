@@ -15,6 +15,7 @@ test("Renders puzzle component with a puzzle", () => {
         { isCorrect: false },
         { isCorrect: true },
       ]}
+      handleWinNavigation={jest.fn()}
     />
   );
   expect(container).toMatchSnapshot();

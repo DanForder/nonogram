@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Puzzle from "../../components/Puzzle/Puzzle";
 import { puzzles } from "../../data/puzzles";
@@ -13,6 +13,7 @@ const Error = (
 
 const PuzzleView = () => {
   const { id } = useParams<PuzzleParams>();
+  const navigate = useNavigate();
 
   if (id === undefined) {
     return Error;
@@ -26,10 +27,15 @@ const PuzzleView = () => {
     return Error;
   }
 
+  const handleWinNavigation = () => {
+    window.alert("You won! moving on to next puzzle");
+    navigate(`/puzzles/${puzzleId + 2}`);
+  };
+
   return (
     <Layout>
       <h2>Puzzle {id}</h2>
-      <Puzzle puzzle={puzzle} />
+      <Puzzle puzzle={puzzle} handleWinNavigation={handleWinNavigation} />
       <Link to="/">Home</Link>
       <br />
       <Link to={`/puzzles/${puzzleId + 2}`}>Puzzle {puzzleId + 2}</Link>

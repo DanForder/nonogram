@@ -13,7 +13,7 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
     // if we get a correct, add to current value, and check if it's selected
     if (isCorrect) {
       currentValue++;
-      currentSelected = isSelected ?? false;
+      currentSelected = (isSelected && currentSelected) ?? false;
     }
 
     // if we have nothing to add, continue
@@ -32,6 +32,7 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
         </span>
       );
       currentValue = 0;
+      currentSelected = true;
     }
   }
 
@@ -47,6 +48,9 @@ export const getPuzzleSize = (length: number): number => {
 };
 
 export const getTotalCorrectTiles = (puzzle: puzzle) => {
+  if (puzzle.length === 0) {
+    return [];
+  }
   return puzzle
     .map(({ isCorrect }): number => {
       if (isCorrect) {
@@ -58,6 +62,9 @@ export const getTotalCorrectTiles = (puzzle: puzzle) => {
 };
 
 export const getSelectedCorrectTiles = (puzzle: puzzle) => {
+  if (puzzle.length === 0) {
+    return [];
+  }
   return puzzle
     .map(({ isCorrect, isSelected }): number => {
       if (isCorrect && isSelected) {

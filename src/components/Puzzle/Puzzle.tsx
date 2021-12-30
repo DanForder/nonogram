@@ -11,11 +11,13 @@ import "./Puzzle.scss";
 
 type PuzzleType = {
   puzzle: puzzle;
+  handleWinNavigation: any;
 };
 
-const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
-  const [puzzleState, setPuzzleState] = useState([...puzzle]);
+const Puzzle: React.FC<PuzzleType> = ({ puzzle, handleWinNavigation }) => {
+  const [puzzleState, setPuzzleState] = useState<puzzle>([]);
   const [livesLeft, setLivesLeft] = useState(3);
+  const [navigating, setNavigating] = useState(false);
 
   const puzzleSize = getPuzzleSize(puzzleState.length);
   const selectedCorrectTiles = getSelectedCorrectTiles(puzzleState);
@@ -26,11 +28,17 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle }) => {
   }, [puzzle]);
 
   useEffect(() => {
-    if (selectedCorrectTiles === totalCorrectTiles) {
-      window.alert("you win!");
-      window.location.reload();
+    // TODO: why is this being called multiple times without the !navigating condition?
+    if (selectedCorrectTiles === totalCorrectTiles && !navigating) {
+      setNavigating(true);
+      handleWinNavigation();
     }
-  }, [selectedCorrectTiles, totalCorrectTiles]);
+  }, [
+    handleWinNavigation,
+    navigating,
+    selectedCorrectTiles,
+    totalCorrectTiles,
+  ]);
 
   useEffect(() => {
     if (livesLeft === 0) {
