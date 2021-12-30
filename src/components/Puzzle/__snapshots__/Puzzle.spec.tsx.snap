@@ -5,6 +5,10 @@ exports[`Renders puzzle component with a puzzle 1`] = `
   <div
     class="puzzle"
   >
+    <p>
+      Lives Left : 
+      3
+    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr;"
