@@ -83,4 +83,35 @@ export const puzzles: puzzle[] = [
     { isCorrect: false },
     { isCorrect: false },
   ],
+  [
+    { isCorrect: false },
+    { isCorrect: false },
+    { isCorrect: true, color: "cadetblue" },
+    { isCorrect: false },
+    { isCorrect: false },
+
+    { isCorrect: false },
+    { isCorrect: true, color: "cadetblue" },
+    { isCorrect: false },
+    { isCorrect: true, color: "cadetblue" },
+    { isCorrect: false },
+
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "grey" },
+
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: true, color: "cornflowerblue" },
+    { isCorrect: false },
+    { isCorrect: true, color: "grey" },
+    { isCorrect: true, color: "grey" },
+
+    { isCorrect: true, color: "grey" },
+    { isCorrect: true, color: "grey" },
+    { isCorrect: true, color: "grey" },
+    { isCorrect: true, color: "grey" },
+    { isCorrect: true, color: "grey" },
+  ],
 ];
