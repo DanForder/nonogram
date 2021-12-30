@@ -7,81 +7,66 @@ exports[`Renders puzzle component with a puzzle 1`] = `
   >
     <div
       class="puzzle__grid"
-      style="grid-template-columns: 1fr 1fr 1fr 1fr;"
+      style="grid-template-columns: auto 1fr 1fr 1fr;"
     >
       <span />
-      <span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
         2
       </span>
-      <span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
         2 
       </span>
-      <span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
         3
       </span>
-      <span>
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
         2
       </span>
       <span
-        class="puzzle__node"
-        style="background-color: red; color: red;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
+        class="puzzle-node"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
       >
-        O
-      </span>
-      <span>
         3
       </span>
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
+        class="puzzle-node"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
       >
-        O
-      </span>
-      <span>
         1 1
       </span>
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: red; color: red;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
       <span
-        class="puzzle__node"
-        style="background-color: dodgerblue; color: dodgerblue;"
-      >
-        O
-      </span>
+        class="puzzle-node"
+      />
     </div>
   </div>
 </div>
