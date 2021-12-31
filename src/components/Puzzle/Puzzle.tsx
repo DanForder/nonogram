@@ -7,6 +7,7 @@ import {
   getTotalCorrectTiles,
 } from "../../utils/puzzleUtils";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
+import SwitchButton from "../RadioTileGroup/RadioTileGroup";
 import "./Puzzle.scss";
 
 type PuzzleType = {
@@ -18,6 +19,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   const [puzzleState, setPuzzleState] = useState<puzzle>([]);
   const [livesLeft, setLivesLeft] = useState(3);
   const [navigating, setNavigating] = useState(false);
+  const [penSelected, setPenSelected] = useState(true);
 
   const puzzleSize = getPuzzleSize(puzzleState.length);
   const selectedCorrectTiles = getSelectedCorrectTiles(puzzleState);
@@ -175,6 +177,10 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
       <div className="puzzle__grid" style={{ gridTemplateColumns }}>
         {puzzleJsx}
       </div>
+      <SwitchButton
+        penSelected={penSelected}
+        updatePenSelected={setPenSelected}
+      />
     </div>
   );
 };

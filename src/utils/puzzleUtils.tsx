@@ -1,6 +1,6 @@
-import { v4 as uuidv4 } from "uuid";
 import puzzle, { puzzleNode } from "../types/puzzle";
 import { basicReducer } from "./arrayUtils";
+import getUniqueId from "./guidUtils";
 
 export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
   let currentValue = 0;
@@ -41,7 +41,7 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
 const getClueSpan = (currentSelected: boolean, currentValue: number) => {
   return (
     <span
-      key={`clue-${uuidv4()}`}
+      key={getUniqueId("clue-")}
       style={{ opacity: currentSelected ? "0.4" : "1" }}
     >
       {currentValue}

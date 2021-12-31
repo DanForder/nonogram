@@ -1,0 +1,29 @@
+.radio-tile {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #201e22;
+  border: 4px dashed #201e22;
+
+  &--selected {
+    background-color: lighten(#201e22, 50);
+  }
+
+  // only apply hover effect if element is not selected
+  &:hover:not(&--selected) {
+    box-shadow: 0 0 8px #5e5a7e;
+  }
+
+  .radio-tile__label {
+  }
+
+  .radio-tile__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
