@@ -122,11 +122,9 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     return result;
   };
 
-  const handleNodeClick = (event: any, index: number, isPrimary: boolean) => {
-    event.preventDefault();
-
-    if (!isPrimary) {
-      console.log(`right click pressed on node ${index}`);
+  const handleNodeClick = (index: number) => {
+    if (!penSelected) {
+      console.log("pen is selected, not handling yet...");
       return;
     }
 
@@ -149,11 +147,8 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
         color={puzzleNode.color}
         isRevealed={puzzleNode.isSelected}
         failState={!puzzleNode.isCorrect && puzzleNode.isSelected}
-        onClick={(e: any) => {
-          handleNodeClick(e, index, true);
-        }}
-        onSecondaryClick={(e: any) => {
-          handleNodeClick(e, index, false);
+        onClick={() => {
+          handleNodeClick(index);
         }}
       />
     );

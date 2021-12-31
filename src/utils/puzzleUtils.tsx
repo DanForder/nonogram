@@ -41,7 +41,7 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
 const getClueSpan = (currentSelected: boolean, currentValue: number) => {
   return (
     <span
-      key={getUniqueId("clue-")}
+      key={getUniqueId()}
       style={{ opacity: currentSelected ? "0.4" : "1" }}
     >
       {currentValue}

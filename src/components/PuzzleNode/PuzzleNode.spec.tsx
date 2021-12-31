@@ -4,43 +4,24 @@ import PuzzleNode from "./PuzzleNode";
 
 test("Renders revealed and correct puzzle node", () => {
   const { container } = customRender(
-    <PuzzleNode
-      onClick={jest.fn()}
-      color="dodgerblue"
-      isRevealed
-      onSecondaryClick={jest.fn()}
-    />
+    <PuzzleNode onClick={jest.fn()} color="dodgerblue" isRevealed />
   );
   expect(container).toMatchSnapshot();
 });
 
 test("Renders revealed and incorrect puzzle node", () => {
   const { container } = customRender(
-    <PuzzleNode
-      onClick={jest.fn()}
-      isRevealed
-      failState
-      onSecondaryClick={jest.fn()}
-    />
+    <PuzzleNode onClick={jest.fn()} isRevealed failState />
   );
   expect(container).toMatchSnapshot();
 });
 
 test("handles onclick correctly", () => {
   const mockPrimaryClick = jest.fn();
-  const mockSecondaryClick = jest.fn();
-  customRender(
-    <PuzzleNode
-      onClick={mockPrimaryClick}
-      color="dodgerblue"
-      onSecondaryClick={mockSecondaryClick}
-    />
-  );
+
+  customRender(<PuzzleNode onClick={mockPrimaryClick} color="dodgerblue" />);
 
   const button = screen.getByRole("button");
   fireEvent.click(button);
   expect(mockPrimaryClick).toHaveBeenCalledTimes(1);
-
-  fireEvent.contextMenu(button);
-  expect(mockSecondaryClick).toHaveBeenCalledTimes(1);
 });
