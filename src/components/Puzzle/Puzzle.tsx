@@ -122,22 +122,44 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     return result;
   };
 
+  const setNodeAsMarked = (puzzleNode: puzzleNode): puzzleNode => {
+    //set new mark state to opposite of current state
+    const newMarkState = !puzzleNode.isMarked;
+    return {
+      ...puzzleNode,
+      isMarked: newMarkState,
+    };
+  };
+
+  const setNodeAsSelected = (puzzleNode: puzzleNode): puzzleNode => {
+    return {
+      ...puzzleNode,
+      isSelected: true,
+      isMarked: false,
+    };
+  };
+
   const handleNodeClick = (index: number) => {
-    if (!penSelected) {
-      console.log("pen is selected, not handling yet...");
+    const { isCorrect, isSelected, isMarked } = puzzleState[index];
+
+    if (isSelected || (isMarked && penSelected)) {
+      console.log("attempted to change a marked or revealed node");
       return;
     }
 
-    const { isCorrect } = puzzleState[index];
+    const tempPuzzleArr = [...puzzleState];
+    let puzzleNode = tempPuzzleArr[index];
 
-    const updatedPuzzleArr = [...puzzleState];
-    updatedPuzzleArr[index] = { ...updatedPuzzleArr[index], isSelected: true };
-
-    if (!isCorrect) {
-      setLivesLeft(livesLeft - 1);
+    if (penSelected) {
+      tempPuzzleArr[index] = setNodeAsSelected(puzzleNode);
+      if (!isCorrect) {
+        setLivesLeft(livesLeft - 1);
+      }
+    } else {
+      tempPuzzleArr[index] = setNodeAsMarked(puzzleNode);
     }
 
-    setPuzzleState(updatedPuzzleArr);
+    setPuzzleState(tempPuzzleArr);
   };
 
   const createPuzzleNode = (puzzleNode: puzzleNode, index: number) => {
@@ -150,6 +172,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
         onClick={() => {
           handleNodeClick(index);
         }}
+        isMarked={puzzleNode.isMarked}
       />
     );
   };

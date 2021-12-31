@@ -6,6 +6,7 @@ export type puzzleNode = {
   isCorrect: boolean;
   isSelected?: boolean;
   color?: string;
+  isMarked?: boolean;
 };
 
 export default puzzle;
