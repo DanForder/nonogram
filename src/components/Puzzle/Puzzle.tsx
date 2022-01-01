@@ -3,6 +3,7 @@ import puzzle, { puzzleNode } from "../../types/puzzle";
 import {
   getClueText,
   getPuzzleSize,
+  getPuzzleStyles,
   getSelectedCorrectTiles,
   getTotalCorrectTiles,
 } from "../../utils/puzzleUtils";
@@ -100,6 +101,37 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     );
   };
 
+  const getRowNodesFromIndex = (puzzleArr: puzzleNode[], index: number) => {
+    // get the index of the node at the beginning of the row
+    const rowBeginning = Math.floor(index / puzzleSize) * puzzleSize;
+    // get the index of the last node in the row
+    const rowEnding = rowBeginning + puzzleSize;
+    // get all nodes in the row
+    return puzzleArr.slice(rowBeginning, rowEnding);
+  };
+
+  const handleRowCheck = (puzzleArr: puzzleNode[], index: number) => {
+    const rowNodes = getRowNodesFromIndex(puzzleArr, index);
+    const correctNodes = rowNodes.filter(({ isCorrect }) => isCorrect);
+    const selectedNodes = correctNodes.filter(({ isSelected }) => isSelected);
+
+    // if they're the same length, we can set all incorrect nodes to marked and selected
+    if (correctNodes.length !== selectedNodes.length) {
+      return;
+    }
+
+    // set all the incorrect + unmarked + unselected nodes to marked and selected
+    rowNodes
+      .filter(
+        ({ isCorrect, isSelected, isMarked }) =>
+          !isCorrect && !isSelected && !isMarked
+      )
+      .forEach((node) => {
+        node.isMarked = true;
+        node.isSelected = true;
+      });
+  };
+
   const getPuzzleJsx = (puzzle: puzzle, size: number) => {
     // initialise result array with the column clues
     let result: JSX.Element[] = [...getColumnClueJsx(puzzle, puzzleSize)];
@@ -150,9 +182,14 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     const tempPuzzleArr = [...puzzleState];
     let puzzleNode = tempPuzzleArr[index];
 
+    //TODO: refactor this dirty nested if/else statement
     if (penSelected) {
       tempPuzzleArr[index] = setNodeAsSelected(puzzleNode);
-      if (!isCorrect) {
+
+      if (isCorrect) {
+        // check for row or column completion, mark any crosses as isMarked and isRevealed if necessary
+        handleRowCheck(tempPuzzleArr, index);
+      } else {
         setLivesLeft(livesLeft - 1);
       }
     } else {
@@ -162,37 +199,29 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     setPuzzleState(tempPuzzleArr);
   };
 
-  const createPuzzleNode = (puzzleNode: puzzleNode, index: number) => {
-    return (
-      <PuzzleNode
-        key={`puzzle-node-${index}`}
-        color={puzzleNode.color}
-        isRevealed={puzzleNode.isSelected}
-        failState={!puzzleNode.isCorrect && puzzleNode.isSelected}
-        onClick={() => {
-          handleNodeClick(index);
-        }}
-        isMarked={puzzleNode.isMarked}
-      />
-    );
-  };
+  const createPuzzleNode = (
+    { color, isSelected, isCorrect, isMarked }: puzzleNode,
+    index: number
+  ) => (
+    <PuzzleNode
+      key={`puzzle-node-${index}`}
+      color={color}
+      isRevealed={isSelected}
+      failState={!isCorrect && isSelected}
+      onClick={() => {
+        handleNodeClick(index);
+      }}
+      isMarked={isMarked}
+    />
+  );
 
-  // sets the grid columns to match the size of inputted puzzle
-  const getGridTemplateColumns = () => {
-    let templateColumns: string = " auto";
-    for (let index = 0; index < puzzleSize; index++) {
-      templateColumns += " 1fr";
-    }
-    return templateColumns;
-  };
-
-  const gridTemplateColumns = getGridTemplateColumns();
+  const puzzleStyles = getPuzzleStyles(puzzleSize);
   const puzzleJsx = getPuzzleJsx(puzzleState, puzzleSize);
 
   return (
     <div className="puzzle">
       <p>Lives Left : {livesLeft}</p>
-      <div className="puzzle__grid" style={{ gridTemplateColumns }}>
+      <div className="puzzle__grid" style={puzzleStyles}>
         {puzzleJsx}
       </div>
       <SwitchButton

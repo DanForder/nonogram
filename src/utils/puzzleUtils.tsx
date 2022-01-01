@@ -84,3 +84,15 @@ export const getSelectedCorrectTiles = (puzzle: puzzle) => {
     })
     .reduce(basicReducer);
 };
+
+// sets the grid columns to match the size of inputted puzzle
+export const getPuzzleStyles = (puzzleSize: number) => {
+  let gridTemplateColumns: string = " auto";
+  for (let index = 0; index < puzzleSize; index++) {
+    gridTemplateColumns += " 1fr";
+  }
+
+  return {
+    gridTemplateColumns,
+  };
+};
