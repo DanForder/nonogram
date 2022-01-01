@@ -9,7 +9,7 @@ export const HomeView = () => {
     <TileLink
       to={`puzzles/${index + 1}`}
       key={`puzzle-${index + 1}`}
-      text={`Puzzle ${index + 1}`}
+      text={index + 1}
       highlighted={isPuzzleCompleted(index)}
     />
   ));

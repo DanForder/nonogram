@@ -4,7 +4,7 @@ import "./TileLink.scss";
 
 type TileLinkProps = {
   to: string;
-  text: string;
+  text: React.ReactText;
   highlighted?: boolean;
 };
 

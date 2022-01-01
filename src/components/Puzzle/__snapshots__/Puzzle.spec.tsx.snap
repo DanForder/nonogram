@@ -18,7 +18,7 @@ exports[`renders puzzle 1`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -27,7 +27,7 @@ exports[`renders puzzle 1`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -36,7 +36,7 @@ exports[`renders puzzle 1`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -53,7 +53,7 @@ exports[`renders puzzle 1`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -71,7 +71,7 @@ exports[`renders puzzle 1`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -129,7 +129,7 @@ exports[`renders puzzle 2`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -138,7 +138,7 @@ exports[`renders puzzle 2`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -147,7 +147,7 @@ exports[`renders puzzle 2`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -156,7 +156,7 @@ exports[`renders puzzle 2`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -177,7 +177,7 @@ exports[`renders puzzle 2`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -198,12 +198,12 @@ exports[`renders puzzle 2`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -225,7 +225,7 @@ exports[`renders puzzle 2`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -283,7 +283,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -292,7 +292,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           4
         </span>
@@ -301,7 +301,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           5
         </span>
@@ -310,12 +310,12 @@ exports[`renders puzzle 3`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -324,7 +324,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -333,7 +333,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -362,7 +362,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -391,7 +391,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           5
         </span>
@@ -420,12 +420,12 @@ exports[`renders puzzle 3`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -454,7 +454,7 @@ exports[`renders puzzle 3`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -484,7 +484,7 @@ exports[`renders puzzle 3`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -542,7 +542,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -551,12 +551,12 @@ exports[`renders puzzle 4`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -565,7 +565,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           5
         </span>
@@ -574,7 +574,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -583,7 +583,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 0.4;"
+          style="opacity: 0.4; font-size: 0.75rem;"
         >
           0
         </span>
@@ -592,7 +592,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -621,12 +621,12 @@ exports[`renders puzzle 4`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -655,7 +655,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           4
         </span>
@@ -684,7 +684,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -713,7 +713,7 @@ exports[`renders puzzle 4`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -743,7 +743,7 @@ exports[`renders puzzle 4`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -801,7 +801,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -810,7 +810,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           4
         </span>
@@ -819,17 +819,17 @@ exports[`renders puzzle 5`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -838,7 +838,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           4
         </span>
@@ -847,7 +847,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           3
         </span>
@@ -856,7 +856,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -885,12 +885,12 @@ exports[`renders puzzle 5`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -919,7 +919,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           5
         </span>
@@ -948,12 +948,12 @@ exports[`renders puzzle 5`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           2
         </span>
@@ -982,7 +982,7 @@ exports[`renders puzzle 5`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           5
         </span>
@@ -1012,7 +1012,7 @@ exports[`renders puzzle 5`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -1070,7 +1070,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 0.4;"
+          style="opacity: 0.4; font-size: 0.75rem;"
         >
           0
         </span>
@@ -1079,7 +1079,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 0.4;"
+          style="opacity: 0.4; font-size: 0.75rem;"
         >
           0
         </span>
@@ -1088,7 +1088,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; justify-content: center;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -1097,7 +1097,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 0.4;"
+          style="opacity: 0.4; font-size: 0.75rem;"
         >
           0
         </span>
@@ -1118,7 +1118,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 0.4;"
+          style="opacity: 0.4; font-size: 0.75rem;"
         >
           0
         </span>
@@ -1139,7 +1139,7 @@ exports[`renders puzzle 6`] = `
         style="display: flex; align-items: center; justify-content: flex-end;"
       >
         <span
-          style="opacity: 1;"
+          style="opacity: 1; font-size: 0.75rem;"
         >
           1
         </span>
@@ -1161,7 +1161,7 @@ exports[`renders puzzle 6`] = `
       class="radio-tile-group"
     >
       <legend>
-        User input toggle
+        Input Type
       </legend>
       <div
         class="radio-tile radio-tile--selected"
@@ -1192,6 +1192,685 @@ exports[`renders puzzle 6`] = `
         <input
           class="radio-tile__input"
           id="78"
+          name="input-toggle"
+          type="radio"
+        />
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`renders puzzle 7`] = `
+<div>
+  <div
+    class="puzzle"
+  >
+    <p>
+      Lives Left : 
+      3
+    </p>
+    <div
+      class="puzzle__grid"
+      style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;"
+    >
+      <span />
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          6
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          8
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          9
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          7
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+      </span>
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          6
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          8
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          3
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          4
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          8
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          7
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1; font-size: 0.75rem;"
+        >
+          5
+        </span>
+      </span>
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+    </div>
+    <fieldset
+      class="radio-tile-group"
+    >
+      <legend>
+        Input Type
+      </legend>
+      <div
+        class="radio-tile radio-tile--selected"
+      >
+        <label
+          class="radio-tile__label"
+          for="109"
+        >
+          ✒️
+        </label>
+        <input
+          checked=""
+          class="radio-tile__input"
+          id="109"
+          name="input-toggle"
+          type="radio"
+        />
+      </div>
+      <div
+        class="radio-tile"
+      >
+        <label
+          class="radio-tile__label"
+          for="110"
+        >
+          ❌
+        </label>
+        <input
+          class="radio-tile__input"
+          id="110"
           name="input-toggle"
           type="radio"
         />

@@ -12,7 +12,7 @@ const RadioTileGroup: React.FC<RadioTileGroupProps> = ({
 }) => {
   return (
     <fieldset className="radio-tile-group">
-      <legend>User input toggle</legend>
+      <legend>Input Type</legend>
       <RadioTile
         onChange={() => {
           updatePenSelected(true);
