@@ -223,6 +223,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
         {puzzleJsx}
       </div>
       <div className="puzzle__hud">
+        {/* TODO: create bespoke fieldset component for the following two components */}
         <fieldset className="puzzle__life-count">
           <legend>Lives Left</legend>
           <span className="puzzle__life-count-hearts">
