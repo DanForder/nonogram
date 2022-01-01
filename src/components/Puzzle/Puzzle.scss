@@ -1,9 +1,11 @@
+@use "../../styles/variables.scss" as *;
+
 .puzzle {
   .puzzle__grid {
     display: grid;
     gap: 0.5rem;
-    background-color: darken(#2c2a30, 5);
-    border: 0.5rem solid darken(#2c2a30, 5);
+    background-color: $foreground-color;
+    border: 0.5rem solid $foreground-color;
     margin-bottom: 2rem;
 
     aspect-ratio: 1;

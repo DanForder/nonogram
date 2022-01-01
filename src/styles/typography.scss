@@ -6,7 +6,7 @@
 
 * {
   font-family: "Bitter", serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h1,
@@ -25,49 +25,13 @@ button {
 }
 
 h1 {
-  font-size: 2.5625rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 2.625rem;
+}
+
 h3 {
-  font-size: 1.625rem;
-}
-
-@media screen and (min-width: $tablet-breakpoint) {
-  * {
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    font-size: 2.6rem;
-  }
-
-  h2 {
-    font-size: 2.05rem;
-  }
-
-  h3 {
-    font-size: 1.65rem;
-  }
-}
-
-@media screen and (min-width: $large-desktop-breakpoint) {
-  * {
-    font-size: 1.4rem;
-  }
-
-  h1 {
-    font-size: 2.75rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
+  font-size: 1.25rem;
 }

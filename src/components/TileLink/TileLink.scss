@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as *;
+
+.tile-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  background-color: $foreground-color;
+}

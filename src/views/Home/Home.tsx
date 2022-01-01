@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import TileContainer from "../../components/TileContainer/TileContainer";
+import TileLink from "../../components/TileLink/TileLink";
 import { puzzles } from "../../data/mock/puzzles";
 
 export const HomeView = () => {
   const puzzleContents = puzzles.map((_puzzle, index) => (
-    <Link
-      style={{ display: "block" }}
+    <TileLink
       to={`puzzles/${index + 1}`}
       key={`puzzle-${index + 1}`}
-    >
-      Puzzle {index + 1}
-    </Link>
+      text={`Puzzle ${index + 1}`}
+    />
   ));
 
   return (
     <Layout>
-      <h1>Welcome to Nonogram Puzzler</h1>
-      {puzzleContents}
+      <h1>Nonogram Puzzler</h1>
+      <TileContainer>{puzzleContents}</TileContainer>
     </Layout>
   );
 };

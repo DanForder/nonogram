@@ -6,8 +6,6 @@ $large-desktop-breakpoint: 1440px;
 $extra-large-desktop-breakpoint: 2560px;
 
 //colors
-$primary-color: #6495ed;
 $text-color: #f5f5f5;
-$disabled-background-color: #cccccc;
-$disabled-text-color: #909090;
-$outline-color: $text-color;
+$background-color: #2c2a30;
+$foreground-color: darken(#2c2a30, 5);

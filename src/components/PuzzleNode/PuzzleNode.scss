@@ -1,10 +1,12 @@
+@use "../../styles/variables.scss" as *;
+
 .puzzle-node {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
 
-  background-color: #2c2a30;
+  background-color: $background-color;
   aspect-ratio: 1;
 
   &--incorrect {
