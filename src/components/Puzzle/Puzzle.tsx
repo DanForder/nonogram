@@ -101,13 +101,32 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     );
   };
 
-  const getRowNodesFromIndex = (puzzleArr: puzzleNode[], index: number) => {
+  const getRowNodesFromIndex = (
+    puzzleArr: puzzleNode[],
+    index: number
+  ): puzzleNode[] => {
     // get the index of the node at the beginning of the row
     const rowBeginning = Math.floor(index / puzzleSize) * puzzleSize;
     // get the index of the last node in the row
     const rowEnding = rowBeginning + puzzleSize;
     // get all nodes in the row
     return puzzleArr.slice(rowBeginning, rowEnding);
+  };
+
+  const getColumnNodesFromIndex = (
+    puzzleArr: puzzleNode[],
+    index: number
+  ): puzzleNode[] => {
+    // get the index of the node at the beginning of the row
+    const columnBeginning = index % puzzleSize;
+    const columnNodes: puzzleNode[] = [];
+
+    // add all nodes on the column
+    for (let i = columnBeginning; i < puzzleArr.length; i += puzzleSize) {
+      columnNodes.push(puzzleArr[i]);
+    }
+
+    return columnNodes;
   };
 
   const handleRowCheck = (puzzleArr: puzzleNode[], index: number) => {
@@ -122,6 +141,28 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
 
     // set all the incorrect + unmarked + unselected nodes to marked and selected
     rowNodes
+      .filter(
+        ({ isCorrect, isSelected, isMarked }) =>
+          !isCorrect && !isSelected && !isMarked
+      )
+      .forEach((node) => {
+        node.isMarked = true;
+        node.isSelected = true;
+      });
+  };
+
+  const handleColumnCheck = (puzzleArr: puzzleNode[], index: number) => {
+    const columnNodes = getColumnNodesFromIndex(puzzleArr, index);
+    const correctNodes = columnNodes.filter(({ isCorrect }) => isCorrect);
+    const selectedNodes = correctNodes.filter(({ isSelected }) => isSelected);
+
+    // if they're the same length, we can set all incorrect nodes to marked and selected
+    if (correctNodes.length !== selectedNodes.length) {
+      return;
+    }
+
+    // set all the incorrect + unmarked + unselected nodes to marked and selected
+    columnNodes
       .filter(
         ({ isCorrect, isSelected, isMarked }) =>
           !isCorrect && !isSelected && !isMarked
@@ -189,6 +230,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
       if (isCorrect) {
         // check for row or column completion, mark any crosses as isMarked and isRevealed if necessary
         handleRowCheck(tempPuzzleArr, index);
+        handleColumnCheck(tempPuzzleArr, index);
       } else {
         setLivesLeft(livesLeft - 1);
       }
