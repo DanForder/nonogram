@@ -138,10 +138,7 @@ export const handleSetToMarked = (nodes: puzzleNode[]) => {
 
   // set all the incorrect + unmarked + unselected nodes to marked and selected
   nodes
-    .filter(
-      ({ isCorrect, isSelected, isMarked }) =>
-        !isCorrect && !isSelected && !isMarked
-    )
+    .filter(({ isCorrect, isSelected }) => !isCorrect && !isSelected)
     .forEach((node) => {
       node.isMarked = true;
       node.isSelected = true;
