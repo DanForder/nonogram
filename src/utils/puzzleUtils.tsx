@@ -38,11 +38,12 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
   return clueJsx;
 };
 
+//TODO: create clue component that can add top to bottom or left to right clues
 const getClueSpan = (currentSelected: boolean, currentValue: number) => {
   return (
     <span
       key={getUniqueId()}
-      style={{ opacity: currentSelected ? "0.4" : "1" }}
+      style={{ opacity: currentSelected ? "0.4" : "1", fontSize: "0.75rem" }}
     >
       {currentValue}
     </span>
