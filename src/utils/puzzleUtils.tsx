@@ -96,3 +96,71 @@ export const getPuzzleStyles = (puzzleSize: number) => {
     gridTemplateColumns,
   };
 };
+
+export const getRowNodesFromIndex = (
+  puzzleArr: puzzleNode[],
+  index: number
+): puzzleNode[] => {
+  const puzzleSize = Math.sqrt(puzzleArr.length);
+  // get the index of the node at the beginning of the row
+  const rowBeginning = Math.floor(index / puzzleSize) * puzzleSize;
+  // get the index of the last node in the row
+  const rowEnding = rowBeginning + puzzleSize;
+  // get all nodes in the row
+  return puzzleArr.slice(rowBeginning, rowEnding);
+};
+
+export const getColumnNodesFromIndex = (
+  puzzleArr: puzzleNode[],
+  index: number
+): puzzleNode[] => {
+  const puzzleSize = Math.sqrt(puzzleArr.length);
+  // get the index of the node at the beginning of the row
+  const columnBeginning = index % puzzleSize;
+  const columnNodes: puzzleNode[] = [];
+
+  // add all nodes on the column
+  for (let i = columnBeginning; i < puzzleArr.length; i += puzzleSize) {
+    columnNodes.push(puzzleArr[i]);
+  }
+
+  return columnNodes;
+};
+
+export const handleSetToMarked = (nodes: puzzleNode[]) => {
+  const correctNodes = nodes.filter(({ isCorrect }) => isCorrect);
+  const selectedNodes = correctNodes.filter(({ isSelected }) => isSelected);
+
+  // if they're the same length, we can set all incorrect nodes to marked and selected
+  if (correctNodes.length !== selectedNodes.length) {
+    return;
+  }
+
+  // set all the incorrect + unmarked + unselected nodes to marked and selected
+  nodes
+    .filter(
+      ({ isCorrect, isSelected, isMarked }) =>
+        !isCorrect && !isSelected && !isMarked
+    )
+    .forEach((node) => {
+      node.isMarked = true;
+      node.isSelected = true;
+    });
+};
+
+export const setNodeAsMarked = (puzzleNode: puzzleNode): puzzleNode => {
+  //set new mark state to opposite of current state
+  const newMarkState = !puzzleNode.isMarked;
+  return {
+    ...puzzleNode,
+    isMarked: newMarkState,
+  };
+};
+
+export const setNodeAsSelected = (puzzleNode: puzzleNode): puzzleNode => {
+  return {
+    ...puzzleNode,
+    isSelected: true,
+    isMarked: false,
+  };
+};

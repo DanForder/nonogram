@@ -114,4 +114,17 @@ export const puzzles: puzzle[] = [
     { isCorrect: true, color: "grey" },
     { isCorrect: true, color: "grey" },
   ],
+  [
+    { isCorrect: false },
+    { isCorrect: false },
+    { isCorrect: false },
+
+    { isCorrect: false },
+    { isCorrect: false },
+    { isCorrect: false },
+
+    { isCorrect: false },
+    { isCorrect: false },
+    { isCorrect: true },
+  ],
 ];

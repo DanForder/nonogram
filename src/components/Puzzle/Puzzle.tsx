@@ -1,11 +1,16 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import puzzle, { puzzleNode } from "../../types/puzzle";
 import {
   getClueText,
+  getColumnNodesFromIndex,
   getPuzzleSize,
   getPuzzleStyles,
+  getRowNodesFromIndex,
   getSelectedCorrectTiles,
   getTotalCorrectTiles,
+  handleSetToMarked,
+  setNodeAsMarked,
+  setNodeAsSelected,
 } from "../../utils/puzzleUtils";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
 import SwitchButton from "../RadioTileGroup/RadioTileGroup";
@@ -26,10 +31,33 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   const selectedCorrectTiles = getSelectedCorrectTiles(puzzleState);
   const totalCorrectTiles = getTotalCorrectTiles(puzzleState);
 
+  const getAutofilledPuzzle = useCallback((puzzleArr: puzzleNode[]) => {
+    const size = Math.sqrt(puzzleArr.length);
+    const edgeIndexes = [];
+
+    // start by adding top row indexes
+    for (let i = 1; i < size; i++) {
+      edgeIndexes.push(i);
+    }
+
+    // now add left-hand size indexes
+    for (let i = size; i < puzzleArr.length; i += size) {
+      edgeIndexes.push(i);
+    }
+
+    // autofill for each of these nodes
+    edgeIndexes.forEach((index) => {
+      handleAutofill(puzzleArr, index);
+    });
+
+    return puzzleArr;
+  }, []);
+
   useEffect(() => {
-    setPuzzleState([...puzzle]);
+    // when loading a new puzzle, do an initial autofill check
+    setPuzzleState(getAutofilledPuzzle([...puzzle]));
     setNavigating(false);
-  }, [puzzle]);
+  }, [getAutofilledPuzzle, puzzle]);
 
   useEffect(() => {
     if (selectedCorrectTiles === totalCorrectTiles && !navigating) {
@@ -101,55 +129,6 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     );
   };
 
-  const getRowNodesFromIndex = (
-    puzzleArr: puzzleNode[],
-    index: number
-  ): puzzleNode[] => {
-    // get the index of the node at the beginning of the row
-    const rowBeginning = Math.floor(index / puzzleSize) * puzzleSize;
-    // get the index of the last node in the row
-    const rowEnding = rowBeginning + puzzleSize;
-    // get all nodes in the row
-    return puzzleArr.slice(rowBeginning, rowEnding);
-  };
-
-  const getColumnNodesFromIndex = (
-    puzzleArr: puzzleNode[],
-    index: number
-  ): puzzleNode[] => {
-    // get the index of the node at the beginning of the row
-    const columnBeginning = index % puzzleSize;
-    const columnNodes: puzzleNode[] = [];
-
-    // add all nodes on the column
-    for (let i = columnBeginning; i < puzzleArr.length; i += puzzleSize) {
-      columnNodes.push(puzzleArr[i]);
-    }
-
-    return columnNodes;
-  };
-
-  const handleSetToMarked = (nodes: puzzleNode[]) => {
-    const correctNodes = nodes.filter(({ isCorrect }) => isCorrect);
-    const selectedNodes = correctNodes.filter(({ isSelected }) => isSelected);
-
-    // if they're the same length, we can set all incorrect nodes to marked and selected
-    if (correctNodes.length !== selectedNodes.length) {
-      return;
-    }
-
-    // set all the incorrect + unmarked + unselected nodes to marked and selected
-    nodes
-      .filter(
-        ({ isCorrect, isSelected, isMarked }) =>
-          !isCorrect && !isSelected && !isMarked
-      )
-      .forEach((node) => {
-        node.isMarked = true;
-        node.isSelected = true;
-      });
-  };
-
   const handleAutofill = (puzzleArr: puzzleNode[], index: number) => {
     const rowNodes = getRowNodesFromIndex(puzzleArr, index);
     const columnNodes = getColumnNodesFromIndex(puzzleArr, index);
@@ -178,23 +157,6 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     }
 
     return result;
-  };
-
-  const setNodeAsMarked = (puzzleNode: puzzleNode): puzzleNode => {
-    //set new mark state to opposite of current state
-    const newMarkState = !puzzleNode.isMarked;
-    return {
-      ...puzzleNode,
-      isMarked: newMarkState,
-    };
-  };
-
-  const setNodeAsSelected = (puzzleNode: puzzleNode): puzzleNode => {
-    return {
-      ...puzzleNode,
-      isSelected: true,
-      isMarked: false,
-    };
   };
 
   const handleNodeClick = (index: number) => {

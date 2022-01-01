@@ -614,7 +614,7 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
       <span
-        class="puzzle-node"
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
       <span
@@ -648,7 +648,7 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
       <span
-        class="puzzle-node"
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
       <span
@@ -677,7 +677,7 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
       <span
-        class="puzzle-node"
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
       <span
@@ -706,7 +706,7 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
       <span
-        class="puzzle-node"
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
       <span
@@ -735,7 +735,7 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
       <span
-        class="puzzle-node"
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
     </div>
@@ -1043,6 +1043,155 @@ exports[`renders puzzle 5`] = `
         <input
           class="radio-tile__input"
           id="68"
+          name="input-toggle"
+          type="radio"
+        />
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`renders puzzle 6`] = `
+<div>
+  <div
+    class="puzzle"
+  >
+    <p>
+      Lives Left : 
+      3
+    </p>
+    <div
+      class="puzzle__grid"
+      style="grid-template-columns: auto 1fr 1fr 1fr;"
+    >
+      <span />
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 0.4;"
+        >
+          0
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 0.4;"
+        >
+          0
+        </span>
+      </span>
+      <span
+        style="display: flex; justify-content: center;"
+      >
+        <span
+          style="opacity: 1;"
+        >
+          1
+        </span>
+      </span>
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 0.4;"
+        >
+          0
+        </span>
+      </span>
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 0.4;"
+        >
+          0
+        </span>
+      </span>
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        style="display: flex; align-items: center; justify-content: flex-end;"
+      >
+        <span
+          style="opacity: 1;"
+        >
+          1
+        </span>
+      </span>
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
+        role="button"
+      />
+      <span
+        class="puzzle-node"
+        role="button"
+      />
+    </div>
+    <fieldset
+      class="radio-tile-group"
+    >
+      <legend>
+        User input toggle
+      </legend>
+      <div
+        class="radio-tile radio-tile--selected"
+      >
+        <label
+          class="radio-tile__label"
+          for="77"
+        >
+          ✒️
+        </label>
+        <input
+          checked=""
+          class="radio-tile__input"
+          id="77"
+          name="input-toggle"
+          type="radio"
+        />
+      </div>
+      <div
+        class="radio-tile"
+      >
+        <label
+          class="radio-tile__label"
+          for="78"
+        >
+          ❌
+        </label>
+        <input
+          class="radio-tile__input"
+          id="78"
           name="input-toggle"
           type="radio"
         />
