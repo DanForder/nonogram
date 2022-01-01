@@ -1,18 +1,44 @@
 @use "../../styles/variables.scss" as *;
 
 .puzzle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    width: 100%;
+    max-width: 550px;
+  }
+
   .puzzle__grid {
     display: grid;
     gap: 0.5rem;
     background-color: $foreground-color;
     border: 0.5rem solid $foreground-color;
-    margin-bottom: 2rem;
-
     aspect-ratio: 1;
-    max-width: 500px;
+    border-radius: $standard-border-radius;
+  }
 
-    & > * {
-      font-size: 1rem;
+  .puzzle__hud {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    > * {
+      flex: 1;
+    }
+
+    .puzzle__life-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: $standard-border-radius;
+
+      .puzzle__life-count-hearts {
+        font-size: 1.45rem;
+      }
     }
   }
 }

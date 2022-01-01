@@ -5,8 +5,11 @@ $desktop-breakpoint: 1024px;
 $large-desktop-breakpoint: 1440px;
 $extra-large-desktop-breakpoint: 2560px;
 
-//colors
+// colors
 $text-color: #f5f5f5;
 $background-color: #2c2a30;
 $foreground-color: darken(#2c2a30, 5);
 $success-green: rgba(98, 243, 98, 0.5);
+
+// standards
+$standard-border-radius: 0.65rem;

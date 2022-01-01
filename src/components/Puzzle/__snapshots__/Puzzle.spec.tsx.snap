@@ -5,10 +5,6 @@ exports[`renders puzzle 1`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr;"
@@ -67,46 +63,62 @@ exports[`renders puzzle 1`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="6"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="6"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="7"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="7"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="6"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="6"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="7"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="7"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -116,10 +128,6 @@ exports[`renders puzzle 2`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr;"
@@ -221,46 +229,62 @@ exports[`renders puzzle 2`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="17"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="17"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="18"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="18"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="17"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="17"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="18"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="18"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -270,10 +294,6 @@ exports[`renders puzzle 3`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
@@ -480,46 +500,62 @@ exports[`renders puzzle 3`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="33"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="33"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="34"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="34"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="33"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="33"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="34"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="34"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -529,10 +565,6 @@ exports[`renders puzzle 4`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
@@ -739,46 +771,62 @@ exports[`renders puzzle 4`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="49"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="49"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="50"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="50"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="49"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="49"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="50"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="50"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -788,10 +836,6 @@ exports[`renders puzzle 5`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
@@ -1008,46 +1052,62 @@ exports[`renders puzzle 5`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="67"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="67"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="68"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="68"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="67"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="67"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="68"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="68"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -1057,10 +1117,6 @@ exports[`renders puzzle 6`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr;"
@@ -1157,46 +1213,62 @@ exports[`renders puzzle 6`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="77"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="77"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="78"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="78"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="77"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="77"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="78"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="78"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -1206,10 +1278,6 @@ exports[`renders puzzle 7`] = `
   <div
     class="puzzle"
   >
-    <p>
-      Lives Left : 
-      3
-    </p>
     <div
       class="puzzle__grid"
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;"
@@ -1836,46 +1904,62 @@ exports[`renders puzzle 7`] = `
         role="button"
       />
     </div>
-    <fieldset
-      class="radio-tile-group"
+    <div
+      class="puzzle__hud"
     >
-      <legend>
-        Input Type
-      </legend>
-      <div
-        class="radio-tile radio-tile--selected"
+      <fieldset
+        class="puzzle__life-count"
       >
-        <label
-          class="radio-tile__label"
-          for="109"
+        <legend>
+          Lives Left
+        </legend>
+        <span
+          class="puzzle__life-count-hearts"
         >
-          ✒️
-        </label>
-        <input
-          checked=""
-          class="radio-tile__input"
-          id="109"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-      <div
-        class="radio-tile"
+          ❤️❤️❤️❤️
+        </span>
+      </fieldset>
+      <fieldset
+        class="radio-tile-group"
       >
-        <label
-          class="radio-tile__label"
-          for="110"
+        <legend>
+          Input Type
+        </legend>
+        <div
+          class="radio-tile radio-tile--selected"
         >
-          ❌
-        </label>
-        <input
-          class="radio-tile__input"
-          id="110"
-          name="input-toggle"
-          type="radio"
-        />
-      </div>
-    </fieldset>
+          <label
+            class="radio-tile__label"
+            for="109"
+          >
+            ✒️
+          </label>
+          <input
+            checked=""
+            class="radio-tile__input"
+            id="109"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+        <div
+          class="radio-tile"
+        >
+          <label
+            class="radio-tile__label"
+            for="110"
+          >
+            ❌
+          </label>
+          <input
+            class="radio-tile__input"
+            id="110"
+            name="input-toggle"
+            type="radio"
+          />
+        </div>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;

@@ -1,5 +1,8 @@
+@use "../../styles/variables.scss" as *;
+
 .radio-tile-group {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
+  border-radius: $standard-border-radius;
 }

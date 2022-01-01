@@ -23,7 +23,7 @@ type PuzzleType = {
 
 const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   const [puzzleState, setPuzzleState] = useState<puzzle>([]);
-  const [livesLeft, setLivesLeft] = useState(3);
+  const [livesLeft, setLivesLeft] = useState(4);
   const [navigating, setNavigating] = useState(false);
   const [penSelected, setPenSelected] = useState(true);
 
@@ -56,6 +56,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   useEffect(() => {
     // when loading a new puzzle, do an initial autofill check
     setPuzzleState(getAutofilledPuzzle([...puzzle]));
+    setLivesLeft(4);
     setNavigating(false);
   }, [getAutofilledPuzzle, puzzle]);
 
@@ -203,19 +204,36 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     />
   );
 
+  const getLivesText = (lives: number) => {
+    let livesText = "";
+
+    for (let i = 0; i < lives; i++) {
+      livesText += "❤️";
+    }
+
+    return livesText;
+  };
+
   const puzzleStyles = getPuzzleStyles(puzzleSize);
   const puzzleJsx = getPuzzleJsx(puzzleState, puzzleSize);
 
   return (
     <div className="puzzle">
-      <p>Lives Left : {livesLeft}</p>
       <div className="puzzle__grid" style={puzzleStyles}>
         {puzzleJsx}
       </div>
-      <SwitchButton
-        penSelected={penSelected}
-        updatePenSelected={setPenSelected}
-      />
+      <div className="puzzle__hud">
+        <fieldset className="puzzle__life-count">
+          <legend>Lives Left</legend>
+          <span className="puzzle__life-count-hearts">
+            {getLivesText(livesLeft)}
+          </span>
+        </fieldset>
+        <SwitchButton
+          penSelected={penSelected}
+          updatePenSelected={setPenSelected}
+        />
+      </div>
     </div>
   );
 };

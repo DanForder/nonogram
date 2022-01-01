@@ -4,24 +4,20 @@
   min-height: 100vh;
   width: 100vw;
   background-color: $background-color;
+  display: flex;
+  justify-content: center;
 
-  &__main {
+  > .layout__main {
     padding: 1rem;
+    max-width: $tablet-breakpoint;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
   .layout {
-    &__main {
+    > .layout__main {
       padding: 2rem;
-    }
-  }
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  .layout {
-    &__main {
-      padding: 2rem 4rem;
     }
   }
 }
