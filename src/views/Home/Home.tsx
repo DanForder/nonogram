@@ -17,6 +17,7 @@ export const HomeView = () => {
   return (
     <Layout>
       <h1>Nonogram Puzzler</h1>
+      <h2>Puzzles</h2>
       <TileContainer>{puzzleContents}</TileContainer>
     </Layout>
   );

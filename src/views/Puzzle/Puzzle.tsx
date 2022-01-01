@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Puzzle from "../../components/Puzzle/Puzzle";
+import PuzzleHeader from "../../components/PuzzleHeader/PuzzleHeader";
 import { puzzles } from "../../data/mock/puzzles";
 import { setPuzzleCompleteState } from "../../utils/localStorageUtils";
 import { PuzzleParams } from "./PuzzleParams";
@@ -13,15 +14,11 @@ const Error = (
 );
 
 const PuzzleView = () => {
-  const { id } = useParams<PuzzleParams>();
   const navigate = useNavigate();
+  const params = useParams<PuzzleParams>();
 
-  if (id === undefined) {
-    return Error;
-  }
-
-  const puzzleId = parseInt(id) - 1;
-
+  const userFacingPuzzleId = parseInt(params.id ?? "-99");
+  const puzzleId = userFacingPuzzleId - 1;
   const puzzle = puzzles[puzzleId];
 
   if (puzzle === undefined) {
@@ -35,11 +32,12 @@ const PuzzleView = () => {
 
   return (
     <Layout>
-      <h2>Puzzle {id}</h2>
+      <PuzzleHeader
+        userFacingPuzzleId={userFacingPuzzleId}
+        puzzleId={puzzleId}
+        lastUserFacingPuzzleId={puzzles.length}
+      />
       <Puzzle puzzle={puzzle} onComplete={handleWin} />
-      <Link to="/">Home</Link>
-      <br />
-      <Link to={`/puzzles/${puzzleId + 2}`}>Puzzle {puzzleId + 2}</Link>
     </Layout>
   );
 };

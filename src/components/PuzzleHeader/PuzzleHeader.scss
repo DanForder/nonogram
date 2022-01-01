@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+
+.puzzle-header {
+  display: grid;
+  grid-template-areas:
+    "heading heading heading"
+    "previous-puzzle home next-puzzle";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  & > * {
+    display: flex;
+    justify-content: center;
+  }
+
+  .puzzle-header__heading {
+    grid-area: heading;
+    margin: 0;
+  }
+
+  .puzzle-header__previous {
+    grid-area: previous-puzzle;
+  }
+
+  .puzzle-header__home {
+    grid-area: home;
+  }
+
+  .puzzle-header__next {
+    grid-area: next-puzzle;
+  }
+
+  .puzzle-header__next,
+  .puzzle-header__previous,
+  .puzzle-header__home {
+    background-color: $foreground-color;
+    padding: 1rem 0;
+    border-radius: 0.65rem;
+  }
+}
