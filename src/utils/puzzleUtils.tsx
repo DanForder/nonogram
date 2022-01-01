@@ -43,7 +43,7 @@ const getClueSpan = (currentSelected: boolean, currentValue: number) => {
   return (
     <span
       key={getUniqueId()}
-      style={{ opacity: currentSelected ? "0.4" : "1", fontSize: "0.6875rem" }}
+      style={{ opacity: currentSelected ? "0.4" : "1", fontSize: "0.75rem" }}
     >
       {currentValue}
     </span>

@@ -1,14 +1,23 @@
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import "./TileLink.scss";
 
 type TileLinkProps = {
   to: string;
   text: string;
+  highlighted?: boolean;
 };
 
-const TileLink: React.FC<TileLinkProps> = ({ to, text }) => {
+const TileLink: React.FC<TileLinkProps> = ({
+  to,
+  text,
+  highlighted = false,
+}) => {
+  const className = classNames("tile-link", {
+    "tile-link--highlighted": highlighted,
+  });
   return (
-    <Link to={to} className="tile-link">
+    <Link to={to} className={className}>
       {text}
     </Link>
   );

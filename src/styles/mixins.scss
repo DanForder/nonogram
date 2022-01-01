@@ -6,3 +6,21 @@
     outline-offset: 0.2rem;
   }
 }
+
+@mixin tick-overlay {
+  &::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4.375rem;
+    height: 4.375rem;
+    transform: translate(-50%, -50%);
+    color: $opaque-text-color;
+    font-size: 3.75rem;
+    line-height: 5rem;
+    text-align: center;
+    border: 2px solid $opaque-text-color;
+    border-radius: 50%;
+  }
+}
