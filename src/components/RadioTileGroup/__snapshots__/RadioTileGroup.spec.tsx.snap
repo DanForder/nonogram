@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders RadioTileGroup with pen not selected 1`] = `
+<div>
+  <fieldset
+    class="radio-tile-group"
+  >
+    <legend>
+      Input Type
+    </legend>
+    <div
+      class="radio-tile"
+    >
+      <label
+        class="radio-tile__label"
+        for="2"
+      >
+        ✒️
+      </label>
+      <input
+        class="radio-tile__input"
+        id="2"
+        name="input-toggle"
+        type="radio"
+      />
+    </div>
+    <div
+      class="radio-tile radio-tile--selected"
+    >
+      <label
+        class="radio-tile__label"
+        for="3"
+      >
+        ❌
+      </label>
+      <input
+        checked=""
+        class="radio-tile__input"
+        id="3"
+        name="input-toggle"
+        type="radio"
+      />
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Renders RadioTileGroup with pen selected 1`] = `
+<div>
+  <fieldset
+    class="radio-tile-group"
+  >
+    <legend>
+      Input Type
+    </legend>
+    <div
+      class="radio-tile radio-tile--selected"
+    >
+      <label
+        class="radio-tile__label"
+        for="0"
+      >
+        ✒️
+      </label>
+      <input
+        checked=""
+        class="radio-tile__input"
+        id="0"
+        name="input-toggle"
+        type="radio"
+      />
+    </div>
+    <div
+      class="radio-tile"
+    >
+      <label
+        class="radio-tile__label"
+        for="1"
+      >
+        ❌
+      </label>
+      <input
+        class="radio-tile__input"
+        id="1"
+        name="input-toggle"
+        type="radio"
+      />
+    </div>
+  </fieldset>
+</div>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders TileLinkContainer with two tile links 1`] = `
+<div>
+  <div
+    class="tile-link-container"
+  >
+    <a
+      class="tile-link tile-link--highlighted"
+      href="/1"
+    >
+      1
+    </a>
+    <a
+      class="tile-link"
+      href="/2"
+    >
+      2
+    </a>
+  </div>
+</div>
+`;

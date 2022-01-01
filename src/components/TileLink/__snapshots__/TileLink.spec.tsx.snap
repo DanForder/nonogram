@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders TileLink 1`] = `
+<div>
+  <a
+    class="tile-link"
+    href="/barry"
+  >
+    5
+  </a>
+</div>
+`;
+
+exports[`Renders TileLink highlighted 1`] = `
+<div>
+  <a
+    class="tile-link tile-link--highlighted"
+    href="/barry"
+  >
+    5
+  </a>
+</div>
+`;

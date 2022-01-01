@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders PuzzleHeader component 1`] = `
+<div>
+  <header
+    class="puzzle-header"
+  >
+    <h1
+      class="puzzle-header__heading"
+    >
+      Puzzle 
+      2
+    </h1>
+    <a
+      class="puzzle-header__previous"
+      href="/puzzles/1"
+    >
+      ⬅️ previous
+    </a>
+    <a
+      class="puzzle-header__home"
+      href="/"
+    >
+      🧩home🧩
+    </a>
+    <a
+      class="puzzle-header__next"
+      href="/puzzles/3"
+    >
+      next ➡️
+    </a>
+  </header>
+</div>
+`;
+
+exports[`Renders with no next puzzle if id is last 1`] = `
+<div>
+  <header
+    class="puzzle-header"
+  >
+    <h1
+      class="puzzle-header__heading"
+    >
+      Puzzle 
+      10
+    </h1>
+    <a
+      class="puzzle-header__previous"
+      href="/puzzles/9"
+    >
+      ⬅️ previous
+    </a>
+    <a
+      class="puzzle-header__home"
+      href="/"
+    >
+      🧩home🧩
+    </a>
+  </header>
+</div>
+`;
+
+exports[`Renders with no previous puzzle if id 0 1`] = `
+<div>
+  <header
+    class="puzzle-header"
+  >
+    <h1
+      class="puzzle-header__heading"
+    >
+      Puzzle 
+      1
+    </h1>
+    <a
+      class="puzzle-header__home"
+      href="/"
+    >
+      🧩home🧩
+    </a>
+    <a
+      class="puzzle-header__next"
+      href="/puzzles/2"
+    >
+      next ➡️
+    </a>
+  </header>
+</div>
+`;

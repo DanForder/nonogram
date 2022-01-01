@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout/Layout";
-import TileContainer from "../../components/TileContainer/TileContainer";
 import TileLink from "../../components/TileLink/TileLink";
+import TileLinkContainer from "../../components/TileLinkContainer/TileLinkContainer";
 import { puzzles } from "../../data/mock/puzzles";
 import { isPuzzleCompleted } from "../../utils/localStorageUtils";
 
@@ -18,7 +18,7 @@ export const HomeView = () => {
     <Layout>
       <h1>Nonogram Puzzler</h1>
       <h2>Puzzles</h2>
-      <TileContainer>{puzzleContents}</TileContainer>
+      <TileLinkContainer>{puzzleContents}</TileLinkContainer>
     </Layout>
   );
 };

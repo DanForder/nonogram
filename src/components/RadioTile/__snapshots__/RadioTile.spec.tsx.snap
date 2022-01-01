@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders RadioTile checked 1`] = `
+<div>
+  <div
+    class="radio-tile radio-tile--selected"
+  >
+    <label
+      class="radio-tile__label"
+      for="0"
+    >
+      Barry's Radio Tile
+    </label>
+    <input
+      checked=""
+      class="radio-tile__input"
+      id="0"
+      name="barry"
+      type="radio"
+    />
+  </div>
+</div>
+`;
+
+exports[`Renders RadioTile unchecked 1`] = `
+<div>
+  <div
+    class="radio-tile"
+  >
+    <label
+      class="radio-tile__label"
+      for="1"
+    >
+      Barry's Radio Tile
+    </label>
+    <input
+      class="radio-tile__input"
+      id="1"
+      name="barry"
+      type="radio"
+    />
+  </div>
+</div>
+`;
