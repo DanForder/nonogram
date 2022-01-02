@@ -12,8 +12,8 @@ import {
   setNodeAsMarked,
   setNodeAsSelected,
 } from "../../utils/puzzleUtils";
+import PuzzleHud from "../PuzzleHud/PuzzleHud";
 import PuzzleNode from "../PuzzleNode/PuzzleNode";
-import SwitchButton from "../RadioTileGroup/RadioTileGroup";
 import "./Puzzle.scss";
 
 type PuzzleType = {
@@ -22,8 +22,8 @@ type PuzzleType = {
 };
 
 const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
-  const [puzzleState, setPuzzleState] = useState<puzzle>([]);
-  const [livesLeft, setLivesLeft] = useState(4);
+  const [puzzleState, setPuzzleState] = useState<puzzleNode[]>([]);
+  const [lives, setLives] = useState(4);
   const [navigating, setNavigating] = useState(false);
   const [penSelected, setPenSelected] = useState(true);
 
@@ -55,8 +55,9 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
 
   useEffect(() => {
     // when loading a new puzzle, do an initial autofill check
-    setPuzzleState(getAutofilledPuzzle([...puzzle]));
-    setLivesLeft(4);
+    setPuzzleState(getAutofilledPuzzle([...puzzle.puzzleNodes]));
+    setLives(4);
+    setPenSelected(true);
     setNavigating(false);
   }, [getAutofilledPuzzle, puzzle]);
 
@@ -69,11 +70,11 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   }, [navigating, onComplete, selectedCorrectTiles, totalCorrectTiles]);
 
   useEffect(() => {
-    if (livesLeft === 0) {
+    if (lives === 0) {
       window.alert("you lost!");
       window.location.reload();
     }
-  }, [livesLeft]);
+  }, [lives]);
 
   const getColumnClueJsx = (
     puzzleNodes: puzzleNode[],
@@ -116,11 +117,11 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     handleSetToMarked(columnNodes);
   };
 
-  const getPuzzleJsx = (puzzle: puzzle, size: number) => {
+  const getPuzzleJsx = (puzzleNodes: puzzleNode[], size: number) => {
     // initialise result array with the column clues
-    let result: JSX.Element[] = [...getColumnClueJsx(puzzle, puzzleSize)];
+    let result: JSX.Element[] = [...getColumnClueJsx(puzzleNodes, puzzleSize)];
 
-    for (let index = 0; index < puzzle.length; index++) {
+    for (let index = 0; index < puzzleNodes.length; index++) {
       const node = puzzleState[index];
 
       // if we're at the beginning of a row, add a row clue
@@ -157,7 +158,7 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
         // check for row or column completion, mark any crosses as isMarked and isRevealed if necessary
         handleAutofill(tempPuzzleArr, index);
       } else {
-        setLivesLeft(livesLeft - 1);
+        setLives(lives - 1);
       }
     } else {
       tempPuzzleArr[index] = setNodeAsMarked(puzzleNode);
@@ -182,16 +183,6 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     />
   );
 
-  const getLivesText = (lives: number) => {
-    let livesText = "";
-
-    for (let i = 0; i < lives; i++) {
-      livesText += "❤️";
-    }
-
-    return livesText;
-  };
-
   const puzzleStyles = getPuzzleStyles(puzzleSize);
   const puzzleJsx = getPuzzleJsx(puzzleState, puzzleSize);
 
@@ -200,19 +191,11 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
       <div className="puzzle__grid" style={puzzleStyles}>
         {puzzleJsx}
       </div>
-      <div className="puzzle__hud">
-        {/* TODO: create bespoke fieldset component for the following two components */}
-        <fieldset className="puzzle__life-count">
-          <legend>Lives Left</legend>
-          <span className="puzzle__life-count-hearts">
-            {getLivesText(livesLeft)}
-          </span>
-        </fieldset>
-        <SwitchButton
-          penSelected={penSelected}
-          updatePenSelected={setPenSelected}
-        />
-      </div>
+      <PuzzleHud
+        lives={lives}
+        penSelected={penSelected}
+        setPenSelected={setPenSelected}
+      />
     </div>
   );
 };

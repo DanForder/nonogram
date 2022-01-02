@@ -1,6 +1,6 @@
 import Clue from "../components/Clue/Clue";
 import ClueContainer from "../components/ClueContainer/ClueContainer";
-import puzzle, { puzzleNode } from "../types/puzzle";
+import { puzzleNode } from "../types/puzzle";
 import { basicReducer } from "./arrayUtils";
 import getUniqueId from "./guidUtils";
 
@@ -64,11 +64,11 @@ export const getPuzzleSize = (length: number): number => {
   return puzzleSize;
 };
 
-export const getTotalCorrectTiles = (puzzle: puzzle) => {
-  if (puzzle.length === 0) {
+export const getTotalCorrectTiles = (puzzleNodes: puzzleNode[]) => {
+  if (puzzleNodes.length === 0) {
     return [];
   }
-  return puzzle
+  return puzzleNodes
     .map(({ isCorrect }): number => {
       if (isCorrect) {
         return 1;
@@ -78,11 +78,11 @@ export const getTotalCorrectTiles = (puzzle: puzzle) => {
     .reduce(basicReducer);
 };
 
-export const getSelectedCorrectTiles = (puzzle: puzzle) => {
-  if (puzzle.length === 0) {
+export const getSelectedCorrectTiles = (puzzleNodes: puzzleNode[]) => {
+  if (puzzleNodes.length === 0) {
     return [];
   }
-  return puzzle
+  return puzzleNodes
     .map(({ isCorrect, isSelected }): number => {
       if (isCorrect && isSelected) {
         return 1;

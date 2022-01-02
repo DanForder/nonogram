@@ -1,0 +1,24 @@
+@use "../../styles/variables.scss" as *;
+
+.puzzle-hud {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  > * {
+    flex: 1;
+  }
+
+  .puzzle-hud__life-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: $standard-border-radius;
+
+    .puzzle-hud__life-count-hearts {
+      font-size: 1.45rem;
+    }
+  }
+}

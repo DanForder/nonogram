@@ -6,8 +6,8 @@
   align-items: center;
 
   > * {
-    width: 100%;
     max-width: 550px;
+    width: 100%;
   }
 
   .puzzle__grid {
@@ -16,28 +16,5 @@
     background-color: $foreground-color;
     border: 0.5rem solid $foreground-color;
     border-radius: $standard-border-radius;
-  }
-
-  .puzzle__hud {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    margin-top: 1rem;
-
-    > * {
-      flex: 1;
-    }
-
-    .puzzle__life-count {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      border-radius: $standard-border-radius;
-
-      .puzzle__life-count-hearts {
-        font-size: 1.45rem;
-      }
-    }
   }
 }
