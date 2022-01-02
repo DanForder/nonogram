@@ -13,7 +13,11 @@ jest.mock("uuid", () => {
 puzzles.forEach((puzzle) => {
   test(`renders puzzle`, () => {
     const { container } = customRender(
-      <Puzzle puzzle={puzzle} onComplete={jest.fn()} />
+      <Puzzle
+        puzzle={puzzle}
+        onComplete={jest.fn()}
+        nextPuzzleLink={"/next-puzzle"}
+      />
     );
     expect(container).toMatchSnapshot();
   });

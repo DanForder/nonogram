@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import puzzle, { puzzleNode } from "../../types/puzzle";
 import {
   getClue,
@@ -18,14 +19,19 @@ import "./Puzzle.scss";
 
 type PuzzleType = {
   puzzle: puzzle;
+  nextPuzzleLink: string;
   onComplete: any;
 };
 
-const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
+const Puzzle: React.FC<PuzzleType> = ({
+  puzzle,
+  nextPuzzleLink,
+  onComplete,
+}) => {
   const [puzzleState, setPuzzleState] = useState<puzzleNode[]>([]);
   const [lives, setLives] = useState(4);
-  const [navigating, setNavigating] = useState(false);
   const [penSelected, setPenSelected] = useState(true);
+  const [isWin, setIsWin] = useState(false);
 
   const puzzleSize = getPuzzleSize(puzzleState.length);
   const selectedCorrectTiles = getSelectedCorrectTiles(puzzleState);
@@ -58,16 +64,15 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
     setPuzzleState(getAutofilledPuzzle([...puzzle.puzzleNodes]));
     setLives(4);
     setPenSelected(true);
-    setNavigating(false);
-  }, [getAutofilledPuzzle, puzzle]);
+    setIsWin(false);
+  }, [getAutofilledPuzzle, puzzle, setIsWin]);
 
   useEffect(() => {
-    if (selectedCorrectTiles === totalCorrectTiles && !navigating) {
-      setNavigating(true);
-      window.alert("you won! moving to next level");
+    if (selectedCorrectTiles === totalCorrectTiles && !isWin) {
+      setIsWin(true);
       onComplete();
     }
-  }, [navigating, onComplete, selectedCorrectTiles, totalCorrectTiles]);
+  }, [isWin, onComplete, selectedCorrectTiles, totalCorrectTiles]);
 
   useEffect(() => {
     if (lives === 0) {
@@ -186,16 +191,50 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
   const puzzleStyles = getPuzzleStyles(puzzleSize);
   const puzzleJsx = getPuzzleJsx(puzzleState, puzzleSize);
 
+  // TODO: extract win to separate version within HUD component
   return (
     <div className="puzzle">
       <div className="puzzle__grid" style={puzzleStyles}>
         {puzzleJsx}
       </div>
-      <PuzzleHud
-        lives={lives}
-        penSelected={penSelected}
-        setPenSelected={setPenSelected}
-      />
+      {isWin ? (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2rem",
+            paddingTop: "1rem",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "2.5rem",
+              textAlign: "center",
+            }}
+          >
+            {puzzle.name}
+          </span>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Link
+              style={{
+                backgroundColor: "#201e22",
+                padding: "1rem",
+                borderRadius: "0.65rem",
+              }}
+              to={nextPuzzleLink}
+            >
+              next ➡️
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <PuzzleHud
+          lives={lives}
+          penSelected={penSelected}
+          setPenSelected={setPenSelected}
+        />
+      )}
     </div>
   );
 };

@@ -64,16 +64,16 @@ exports[`renders puzzle 1`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -230,16 +230,16 @@ exports[`renders puzzle 2`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -501,16 +501,16 @@ exports[`renders puzzle 3`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -772,16 +772,16 @@ exports[`renders puzzle 4`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -1053,16 +1053,16 @@ exports[`renders puzzle 5`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -1214,16 +1214,16 @@ exports[`renders puzzle 6`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
@@ -1905,16 +1905,16 @@ exports[`renders puzzle 7`] = `
       />
     </div>
     <div
-      class="puzzle__hud"
+      class="puzzle-hud"
     >
       <fieldset
-        class="puzzle__life-count"
+        class="puzzle-hud__life-count"
       >
         <legend>
           Lives Left
         </legend>
         <span
-          class="puzzle__life-count-hearts"
+          class="puzzle-hud__life-count-hearts"
         >
           ❤️❤️❤️❤️
         </span>
