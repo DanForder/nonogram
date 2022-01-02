@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clue component (complete) 1`] = `
+<div>
+  <span
+    class="clue clue--completed"
+  >
+    3
+  </span>
+</div>
+`;
+
+exports[`Clue component (incomplete) 1`] = `
+<div>
+  <span
+    class="clue"
+  >
+    3
+  </span>
+</div>
+`;

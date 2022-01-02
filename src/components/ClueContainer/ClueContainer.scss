@@ -1,0 +1,11 @@
+.clue-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.3rem;
+
+  &--column {
+    flex-direction: column;
+    gap: unset;
+  }
+}

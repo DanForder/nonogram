@@ -1,14 +1,20 @@
+import Clue from "../components/Clue/Clue";
+import ClueContainer from "../components/ClueContainer/ClueContainer";
 import puzzle, { puzzleNode } from "../types/puzzle";
 import { basicReducer } from "./arrayUtils";
 import getUniqueId from "./guidUtils";
 
-export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
+export const getClue = (
+  puzzleNodes: puzzleNode[],
+  isColumn: boolean,
+  key: string
+): JSX.Element => {
   let currentValue = 0;
-  let clueJsx: JSX.Element[] = [];
+  let clues: JSX.Element[] = [];
   let currentSelected = true;
 
-  for (let i = 0; i < clues.length; i++) {
-    const { isCorrect, isSelected } = clues[i];
+  for (let i = 0; i < puzzleNodes.length; i++) {
+    const { isCorrect, isSelected } = puzzleNodes[i];
 
     // if we get a correct, add to current value then continue
     if (isCorrect) {
@@ -25,29 +31,29 @@ export const getClueText = (clues: puzzleNode[]): JSX.Element[] => {
       continue;
     }
 
-    clueJsx.push(getClueSpan(currentSelected, currentValue));
+    clues.push(
+      <Clue
+        key={getUniqueId()}
+        completed={currentSelected}
+        value={currentValue}
+      />
+    );
     currentValue = 0;
     currentSelected = true;
   }
 
   // if we have more values or nothing in the array, add the final element
-  if (clueJsx.length === 0 || currentValue > 0) {
-    clueJsx.push(getClueSpan(currentSelected, currentValue));
+  if (clues.length === 0 || currentValue > 0) {
+    clues.push(
+      <Clue
+        key={getUniqueId()}
+        completed={currentSelected}
+        value={currentValue}
+      />
+    );
   }
 
-  return clueJsx;
-};
-
-//TODO: create clue component that can add top to bottom or left to right clues
-const getClueSpan = (currentSelected: boolean, currentValue: number) => {
-  return (
-    <span
-      key={getUniqueId()}
-      style={{ opacity: currentSelected ? "0.4" : "1", fontSize: "0.75rem" }}
-    >
-      {currentValue}
-    </span>
-  );
+  return <ClueContainer clues={clues} isColumn={isColumn} key={key} />;
 };
 
 export const getPuzzleSize = (length: number): number => {

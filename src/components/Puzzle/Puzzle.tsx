@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import puzzle, { puzzleNode } from "../../types/puzzle";
 import {
-  getClueText,
+  getClue,
   getColumnNodesFromIndex,
   getPuzzleSize,
   getPuzzleStyles,
@@ -88,19 +88,8 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
         columnClues.push(puzzleNodes[j]);
       }
 
-      const clueText = getClueText(columnClues);
-      const clueJsx = (
-        <span
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-          key={`clue-column-${i}`}
-        >
-          {clueText}
-        </span>
-      );
-      toReturn.push(clueJsx);
+      const clue = getClue(columnClues, true, `clue-column-${i}`);
+      toReturn.push(clue);
     }
 
     return toReturn;
@@ -114,20 +103,9 @@ const Puzzle: React.FC<PuzzleType> = ({ puzzle, onComplete }) => {
       currentRowIndex,
       currentRowIndex + rowSize
     );
-    const clueText = getClueText(rowClues);
+    const clue = getClue(rowClues, false, `clue-${currentRowIndex}`);
 
-    return (
-      <span
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-        }}
-        key={`clue-${currentRowIndex}`}
-      >
-        {clueText}
-      </span>
-    );
+    return clue;
   };
 
   const handleAutofill = (puzzleArr: puzzleNode[], index: number) => {

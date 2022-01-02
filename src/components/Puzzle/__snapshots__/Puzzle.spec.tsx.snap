@@ -10,33 +10,33 @@ exports[`renders puzzle 1`] = `
       style="grid-template-columns: auto 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -45,15 +45,15 @@ exports[`renders puzzle 1`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -133,42 +133,42 @@ exports[`renders puzzle 2`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -181,15 +181,15 @@ exports[`renders puzzle 2`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -202,20 +202,20 @@ exports[`renders puzzle 2`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -299,65 +299,65 @@ exports[`renders puzzle 3`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -378,15 +378,15 @@ exports[`renders puzzle 3`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -407,15 +407,15 @@ exports[`renders puzzle 3`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -436,20 +436,20 @@ exports[`renders puzzle 3`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -470,15 +470,15 @@ exports[`renders puzzle 3`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -570,65 +570,65 @@ exports[`renders puzzle 4`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 0.4; font-size: 0.75rem;"
+          class="clue clue--completed"
         >
           0
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -649,20 +649,20 @@ exports[`renders puzzle 4`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -683,15 +683,15 @@ exports[`renders puzzle 4`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -712,15 +712,15 @@ exports[`renders puzzle 4`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -741,15 +741,15 @@ exports[`renders puzzle 4`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -841,70 +841,70 @@ exports[`renders puzzle 5`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -925,20 +925,20 @@ exports[`renders puzzle 5`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -959,15 +959,15 @@ exports[`renders puzzle 5`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -988,20 +988,20 @@ exports[`renders puzzle 5`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           2
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1022,15 +1022,15 @@ exports[`renders puzzle 5`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1122,42 +1122,42 @@ exports[`renders puzzle 6`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 0.4; font-size: 0.75rem;"
+          class="clue clue--completed"
         >
           0
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 0.4; font-size: 0.75rem;"
+          class="clue clue--completed"
         >
           0
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 0.4; font-size: 0.75rem;"
+          class="clue clue--completed"
         >
           0
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
@@ -1170,15 +1170,15 @@ exports[`renders puzzle 6`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 0.4; font-size: 0.75rem;"
+          class="clue clue--completed"
         >
           0
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
@@ -1191,15 +1191,15 @@ exports[`renders puzzle 6`] = `
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           1
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node puzzle-node--incorrect puzzle-node--marked"
         role="button"
@@ -1283,125 +1283,125 @@ exports[`renders puzzle 7`] = `
       style="grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;"
     >
       <span />
-      <span
-        style="display: flex; justify-content: center;"
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           6
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           8
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           9
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           7
         </span>
-      </span>
-      <span
-        style="display: flex; justify-content: center;"
+      </div>
+      <div
+        class="clue-container clue-container--column"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      </div>
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1442,15 +1442,15 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           6
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1491,15 +1491,15 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           8
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1540,20 +1540,20 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1594,20 +1594,20 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1648,20 +1648,20 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           3
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1702,20 +1702,20 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           4
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1756,15 +1756,15 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           8
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1805,15 +1805,15 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           7
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"
@@ -1854,15 +1854,15 @@ exports[`renders puzzle 7`] = `
         class="puzzle-node"
         role="button"
       />
-      <span
-        style="display: flex; align-items: center; justify-content: flex-end;"
+      <div
+        class="clue-container"
       >
         <span
-          style="opacity: 1; font-size: 0.75rem;"
+          class="clue"
         >
           5
         </span>
-      </span>
+      </div>
       <span
         class="puzzle-node"
         role="button"

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClueContainer component  (column) 1`] = `
+<div>
+  <div
+    class="clue-container clue-container--column"
+  >
+    <span
+      class="clue"
+    >
+      3
+    </span>
+    <span
+      class="clue clue--completed"
+    >
+      4
+    </span>
+  </div>
+</div>
+`;
+
+exports[`ClueContainer component 1`] = `
+<div>
+  <div
+    class="clue-container"
+  >
+    <span
+      class="clue"
+    >
+      3
+    </span>
+    <span
+      class="clue clue--completed"
+    >
+      4
+    </span>
+  </div>
+</div>
+`;
