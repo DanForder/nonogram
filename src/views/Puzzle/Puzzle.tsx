@@ -9,7 +9,7 @@ import { PuzzleParams } from "./PuzzleParams";
 const Error = (
   <Layout>
     <h2>No puzzle found</h2>
-    <Link to="/">Home</Link>
+    <Link to="/">Go Home</Link>
   </Layout>
 );
 

@@ -147,8 +147,8 @@ const Puzzle: React.FC<PuzzleType> = ({
   const handleNodeClick = (index: number) => {
     const { isCorrect, isSelected, isMarked } = puzzleState[index];
 
+    // don't let user mark an already marked or revealed node
     if (isSelected || (isMarked && penSelected)) {
-      console.log("attempted to change a marked or revealed node");
       return;
     }
 

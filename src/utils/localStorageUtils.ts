@@ -1,5 +1,5 @@
 export const getLocalStorageItem = (key: string): string | null => {
-  //get encryted item with encrypted key
+  //get encrypted item with encrypted key
   const encryptedKey = window.btoa(key);
   const item = window.localStorage.getItem(encryptedKey);
 
